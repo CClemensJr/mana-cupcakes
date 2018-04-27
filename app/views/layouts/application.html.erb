@@ -8,6 +8,7 @@
 
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -20,6 +21,7 @@
           <%= link_to "About", pages_about_path, class: "nav-item nav-link text-light" %>
           <%= link_to "Contact", pages_contact_path, class: "nav-item nav-link text-light" %>
           <%= link_to "Menu", pages_menu_path, class: "nav-item nav-link text-light" %>
+          <%= link_to image_tag('shopping-cart.png'), root_path, class: "nav-item nav-link text-white shopping-cart" %>
         </div>
       </div>
     </nav>
