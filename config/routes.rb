@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/about'
   get 'pages/menu'
+  get 'products/index' => 'products#index'
 
   root 'pages#home'
 end
