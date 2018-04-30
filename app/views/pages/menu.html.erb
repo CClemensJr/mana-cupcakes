@@ -1,14 +1,28 @@
 <% @title = "Menu" %>
 
-<% 9.times do %>
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="http://via.placeholder.com/286x160?text=cupcake" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+<h1>Check out these ever lovin cupcakes!</h1>
+
+<% @products.each do |product| %>
+  <div class="well">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3><%= product.title %></h3>
+      </div>
+      <div class="col-sm-8">
+        <p><%= product.description %></p>
+      </div>
+      <div class="col-sm-8">
+        <div class="pull-right">
+          <%= form_for(@order_item) do |f| %>
+            <%= f.hidden_field :product_id, value: product.id %>
+            <h5><%= product.price %></h5>
+
+            <div class="form-group">
+              <%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
+            </div>
+
+            <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
+          <% end %>
         </div>
       </div>
     </div>

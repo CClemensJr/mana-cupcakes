@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20180427195629) do
   create_table "order_items", force: :cascade do |t|
     t.integer "product_id"
     t.integer "order_id"
-    t.decimal "unit_price"
+    t.decimal "unit_price", precision: 8, scale: 2
     t.integer "quantity"
-    t.decimal "total_price"
+    t.decimal "total_price", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
