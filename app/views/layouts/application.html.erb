@@ -21,7 +21,10 @@
           <%= link_to "About", pages_about_path, class: "nav-item nav-link text-light" %>
           <%= link_to "Contact", pages_contact_path, class: "nav-item nav-link text-light" %>
           <%= link_to "Menu", pages_menu_path, class: "nav-item nav-link text-light" %>
-          <%= link_to image_tag('shopping-cart.png'), products_path, class: "nav-item nav-link text-white shopping-cart" %>
+          <%= link_to carts_path, class: "nav-item nav-link text-white shopping-cart" do %>
+            <%= image_tag("shopping-cart.png") %>
+            <span><%= "#{current_order.order_items.size} items @ $#{current_order.subtotal}" %></span>
+          <% end %>
         </div>
       </div>
     </nav>
