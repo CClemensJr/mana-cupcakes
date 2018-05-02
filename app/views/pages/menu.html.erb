@@ -13,7 +13,7 @@
       </div>
       <div class="col-sm-8">
         <div class="pull-right">
-          <%= form_for(@order_item) do |f| %>
+          <%= form_for(@order_item, remote: true) do |f| %>
             <%= f.hidden_field :product_id, value: product.id %>
             <h5><%= product.price %></h5>
 
@@ -21,7 +21,7 @@
               <%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
             </div>
 
-            <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
+            <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm', remote: true %>
           <% end %>
         </div>
       </div>

@@ -18,6 +18,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   def edit
     @product = Product.find(params[:id])
   end
