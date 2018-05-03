@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.1'
 gem 'jquery-rails'
+gem 'stripe'
 
 
 group :development, :test do
