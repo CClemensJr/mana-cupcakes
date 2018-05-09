@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
     <title>Mana Cupcakes | <%= @title %></title>
 
@@ -12,7 +12,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <!--body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
       <%= link_to "Mana Cupcakes", root_path, class: "navbar-brand text-light" %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -24,7 +24,35 @@
           <%= render 'layouts/cart' %>
         </div>
       </div>
-    </nav>
-    <%= yield %>
+    </nav-->
+    <body class="text-center <%= params[:action] %>">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Mana Cupcakes</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <%= link_to "Home", root_path, class: "nav-item nav-link text-light" %>
+            <%= link_to "About", pages_about_path, class: "nav-item nav-link text-light" %>
+            <%= link_to "Contact", pages_contact_path, class: "nav-item nav-link text-light" %>
+            <%= link_to "Menu", pages_menu_path, class: "nav-item nav-link text-light" %>
+            <%= render 'layouts/cart' %>
+          </nav>
+        </div>
+      </header>
+
+      <%= yield %>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Mana Cupcakes, copyright 2018</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
   </body>
 </html>
