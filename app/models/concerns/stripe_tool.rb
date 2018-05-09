@@ -7,7 +7,7 @@ module StripeTool
     )
   end
 
-  def self.create_charge(customer_id: customer_id, amount: amount, description: description)
+  def self.create_charge(customer_id, amount, description)
     Stripe::Charge.create (
       customer_id: customer_id,
       amount:      amount,
