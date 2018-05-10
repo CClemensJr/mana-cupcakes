@@ -9,7 +9,7 @@
       </div>
     <% end %>
     <label class="amount">
-      <span>Amount: <%= ChargesHelper.pretty_amount(@amount) %></span>
+      <span>Amount: <%= pretty_amount(@amount) %></span>
     </label>
   </article>
 
@@ -18,5 +18,5 @@
           data-description="A month's subscription"
           data-amount="<%= @amount %>"
           data-locale="auto"></script>
-<% end %>
+ <% end %>
 </div>
