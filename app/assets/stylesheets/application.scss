@@ -147,13 +147,6 @@
    padding: .75rem 1.25rem;
    font-weight: 700;
  }
-.main {
-  background: url(images/lemon_cupcake.JPG) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 
  /*
@@ -162,3 +155,16 @@
  .mastfoot {
    color: rgba(255, 255, 255, .5);
  }
+
+
+ /*
+  * Menu
+  */
+
+  .card-img-top {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    margin: none;
+    padding: none;
+  }

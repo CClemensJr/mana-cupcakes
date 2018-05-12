@@ -1,3 +1,17 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card {
+  //height: 300px;
+  //width: 400px;
+  //overflow: hidden;
+}
+
+.card img {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  width: 100%;
+  max-height: 250px;
+  margin-bottom: 1rem;
+}

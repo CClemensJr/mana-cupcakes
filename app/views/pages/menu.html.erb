@@ -1,30 +1,168 @@
 <% @title = "Menu" %>
-
+<%#
 <h1>Check out these ever lovin cupcakes!</h1>
 
-<% @products.each do |product| %>
+<% @products.each do |product| >
   <div class="well">
     <div class="row">
       <div class="col-sm-8">
-        <h3><%= product.title %></h3>
+        <h3><%= product.title ></h3>
       </div>
       <div class="col-sm-8">
-        <p><%= product.description %></p>
+        <p><%= product.description ></p>
       </div>
       <div class="col-sm-8">
         <div class="pull-right">
-          <%= form_for(@order_item, remote: true) do |f| %>
-            <%= f.hidden_field :product_id, value: product.id %>
-            <h5><%= product.price %></h5>
+          <%= form_for(@order_item, remote: true) do |f| >
+            <%= f.hidden_field :product_id, value: product.id >
+            <h5><%= product.price ></h5>
 
             <div class="form-group">
-              <%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
+              <%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' >
             </div>
 
-            <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm', remote: true %>
-          <% end %>
+            <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm', remote: true >
+          <% end >
         </div>
       </div>
     </div>
   </div>
 <% end %>
+
+<main role="main">
+     <!--section class="jumbotron text-center"-->
+       <div class="container text-center">
+         <h1 class="jumbotron-heading">All the cupcakes you will ever need.</h1>
+         <p class="lead">1 cupcake = $3, 6 cupcakes = $15, 12 cupcakes = $30</p>
+       </div>
+     <!--/section-->
+
+     <!--div class="album py-2 bg-dark">
+       <div class="container">
+
+         <div class="row"-->
+            <div class="card-columns">
+             <div class="card box-shadow border-info">
+               <%= image_tag("bacon_maple.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Bacon Maple</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="card box-shadow ">
+               <%= image_tag("banana_creme.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Banana Creme</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="card box-shadow ">
+               <%= image_tag("blueberry_creme.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Blueberry Creme</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="card box-shadow ">
+               <%= image_tag("pumpkin_pie.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Pumpkin Pie</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="card box-shadow ">
+               <%= image_tag("raspberry_chocolate.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Raspberry Chocolate</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="card box-shadow ">
+               <%= image_tag("red_velvet.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Red Velvet</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="card box-shadow ">
+               <%= image_tag("strawberry_creme.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Strawberry Creme</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="card box-shadow ">
+               <%= image_tag("tiramisu.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Tiramisu</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="card box-shadow ">
+               <%= image_tag("triple_chocolate.JPG", class: "card-img-top") %>
+               <div class="card-body">
+                 <p class="card-text">Triple Chocolate</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            </div>
+         <!--/div>
+       </div>
+     </div-->
+
+   </main>
